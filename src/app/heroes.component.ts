@@ -5,7 +5,6 @@ import { HeroService } from './hero.service';
 @Component({
   selector: 'my-heroes',
   template: `
-  <h1>{{title}}</h1>
   <h2>My Heroes</h2>
   <ul class="heroes">
     <li *ngFor="let hero of heroes"
@@ -64,8 +63,7 @@ import { HeroService } from './hero.service';
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
   }
-`],
-  providers: [HeroService]
+`]
 })
 export class HeroesComponent implements OnInit { 
   
@@ -73,7 +71,6 @@ export class HeroesComponent implements OnInit {
     this.getHeroes();
   }
 
-  title = 'Tour of Heroes';
   selectedHero: Hero;
   heroes: Hero[];
 
